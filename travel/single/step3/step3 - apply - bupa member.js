@@ -17,7 +17,7 @@ function getVisible (elements) {
   const element = document.querySelector('[data-step-index="3"]');
 
   if (isVisible(element)) {
-    const EVENT = { bubbles: true, cancelable: true, view: window };;
+    const EVENT = { bubbles: true, cancelable: true, view: window };
 
     const bupaMember = element.querySelector('.bupa-member input[type="text"]');
     if (bupaMember) {
