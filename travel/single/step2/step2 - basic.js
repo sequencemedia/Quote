@@ -15,9 +15,25 @@
  *    button 4/5
  */
 
-(function step2 () {
-  const EVENT = { bubbles: true, cancelable: true, view: window };
+function isVisible (element) {
+  return !!(
+    element && !(window.getComputedStyle(element)
+      .getPropertyValue('display') === 'none')
+  );
+}
 
-  const button = document.querySelector('[data-step-index="2"] [data-product-index="0"] button.buy-cta');
-  if (button) button.dispatchEvent(new MouseEvent('click', EVENT));
+function getVisible (elements) {
+  return Array.from(elements)
+    .find(isVisible) || null;
+}
+
+(function step2 () {
+  const element = document.querySelector('[data-step-index="2"]');
+
+  if (isVisible(element)) {
+    const EVENT = { bubbles: true, cancelable: true, view: window };
+
+    const button = element.querySelector('[data-product-index="0"] button.buy-cta');
+    if (button) button.dispatchEvent(new MouseEvent('click', EVENT));
+  }
 })();

@@ -1,33 +1,49 @@
 /* globals MouseEvent */
 /* eslint semi: 'off' */
 
+function isVisible (element) {
+  return !!(
+    element && !(window.getComputedStyle(element)
+      .getPropertyValue('display') === 'none')
+  );
+}
+
+function getVisible (elements) {
+  return Array.from(elements)
+    .find(isVisible) || null;
+}
+
 (function step4 () {
-  const EVENT = { bubbles: true, cancelable: true, view: window };
+  const element = document.querySelector('[data-step-index="4"]');
 
-  const address1 = document.querySelector('[data-step-index="4"] input#address_1');
-  if (address1) address1.value = '4 Callisons Place';
+  if (isVisible(element)) {
+    const EVENT = { bubbles: true, cancelable: true, view: window };
 
-  const address2 = document.querySelector('[data-step-index="4"] input#address_2');
-  if (address2) address2.value = 'Bellot Street';
+    const address1 = element.querySelector('input#address_1');
+    if (address1) address1.value = '4 Callisons Place';
 
-  const addressCity = document.querySelector('[data-step-index="4"] input#address_city');
-  if (addressCity) addressCity.value = 'Greenwich';
+    const address2 = element.querySelector('input#address_2');
+    if (address2) address2.value = 'Bellot Street';
 
-  const addressZip = document.querySelector('[data-step-index="4"] input#address_zip');
-  if (addressZip) addressZip.value = 'SE10 0AJ';
+    const addressCity = element.querySelector('input#address_city');
+    if (addressCity) addressCity.value = 'Greenwich';
 
-  const emailAddress = document.querySelector('[data-step-index="4"] input.email-address-js');
-  if (emailAddress) emailAddress.value = 'jonathan.perry@valtech.co.uk';
+    const addressZip = element.querySelector('input#address_zip');
+    if (addressZip) addressZip.value = 'SE10 0AJ';
 
-  const confirmEmailAddress = document.querySelector('[data-step-index="4"] input.confirm-email-address-js');
-  if (confirmEmailAddress) confirmEmailAddress.value = 'jonathan.perry@valtech.co.uk';
+    const emailAddress = element.querySelector('input.email-address-js');
+    if (emailAddress) emailAddress.value = 'jonathan.perry@valtech.co.uk';
 
-  const acceptConditions = document.querySelector('[data-step-index="4"] .accept-conditions-js');
-  if (acceptConditions) acceptConditions.dispatchEvent(new MouseEvent('click', EVENT));
+    const confirmEmailAddress = element.querySelector('input.confirm-email-address-js');
+    if (confirmEmailAddress) confirmEmailAddress.value = 'jonathan.perry@valtech.co.uk';
 
-  const button = document.querySelector('.buy-btn a');
-  if (button) {
-    const event = new MouseEvent('click', EVENT);
-    if (!button.dispatchEvent(event)) event.preventDefault();
+    const acceptConditions = element.querySelector('.accept-conditions-js');
+    if (acceptConditions) acceptConditions.dispatchEvent(new MouseEvent('click', EVENT));
+
+    const button = document.querySelector('.buy-btn a');
+    if (button) {
+      const event = new MouseEvent('click', EVENT);
+      if (!button.dispatchEvent(event)) event.preventDefault();
+    }
   }
 })();

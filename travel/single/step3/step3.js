@@ -1,9 +1,25 @@
 /* globals MouseEvent */
 /* eslint semi: "off" */
 
-(function step3 () {
-  const EVENT = { bubbles: true, cancelable: true, view: window };
+function isVisible (element) {
+  return !!(
+    element && !(window.getComputedStyle(element)
+      .getPropertyValue('display') === 'none')
+  );
+}
 
-  const button = document.querySelector('[data-step-index="3"] button.cta-button.quote-cta-next');
-  if (button) button.dispatchEvent(new MouseEvent('click', EVENT));
+function getVisible (elements) {
+  return Array.from(elements)
+    .find(isVisible) || null;
+}
+
+(function step3 () {
+  const element = document.querySelector('[data-step-index="3"]');
+
+  if (isVisible(element)) {
+    const EVENT = { bubbles: true, cancelable: true, view: window };
+
+    const button = element.querySelector('button.cta-button.quote-cta-next');
+    if (button) button.dispatchEvent(new MouseEvent('click', EVENT));
+  }
 })();
