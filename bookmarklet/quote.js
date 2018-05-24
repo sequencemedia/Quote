@@ -1,4 +1,6 @@
-(function () { // eslint-disable-line
+/* eslint no-console: "off" */
+
+(function bookmarklet() {
   function execute() {
     const {
       quote = () => {
@@ -9,7 +11,7 @@
     try {
       quote();
     } catch ({ message = 'An error occurred executing `quote`.' }) {
-      console.error(message); // eslint-disable-line
+      console.error(message);
     }
   }
 

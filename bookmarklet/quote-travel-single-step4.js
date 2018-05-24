@@ -1,4 +1,6 @@
-(function () { // eslint-disable-line
+/* eslint no-console: "off" */
+
+(function bookmarklet() {
   function execute() {
     const {
       travel: {
@@ -13,7 +15,7 @@
     try {
       step4();
     } catch ({ message = 'An error occurred executing `quote.travel.single.step4`.' }) {
-      console.error(message); // eslint-disable-line
+      console.error(message);
     }
   }
 

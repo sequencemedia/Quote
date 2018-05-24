@@ -1,4 +1,6 @@
-(function () { // eslint-disable-line
+/* eslint no-console: "off" */
+
+(function bookmarklet() {
   function execute() {
     const {
       travel: {
@@ -15,7 +17,7 @@
     try {
       applyCampaignCode();
     } catch ({ message = 'An error occurred executing `quote.travel.single.step3.applyCampaignCode`.' }) {
-      console.error(message); // eslint-disable-line
+      console.error(message);
     }
   }
 
