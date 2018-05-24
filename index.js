@@ -1,1 +1,1 @@
-import quote from './quote'
+import quote from './quote.js'
