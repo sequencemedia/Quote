@@ -1,10 +1,10 @@
 (function () {
-  if (!document.querySelector('#quote-bookmarklet')) {
+  if (!document.querySelector('#bupa-global-quote')) {
     const script = document.createElement('script');
 
     script.setAttribute('type', 'module');
-    script.setAttribute('src', `https://rawgit.com/sequencemedia/Quote/master/index.js?${(new Date).valueOf()}`);
-    script.setAttribute('id', 'quote-bookmarklet');
+    script.setAttribute('src', 'https://rawgit.com/sequencemedia/Quote/master/index.js');
+    script.setAttribute('id', 'bupa-global-quote');
     script.addEventListener('load', function () {
       const { quote = () => { throw new Error('Default `quote`.') } } = window.bupaGlobal || {};
 

@@ -2,9 +2,9 @@
 
 import {
   isVisible
-} from '../../../common/element.js';
+} from '../../common/element.js';
 
-import EVENT from '../../../common/event.js';
+import EVENT from '../../common/event.js';
 
 export default function altapay () {
   const element = document.querySelector('section.altapay-main-container');
