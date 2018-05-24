@@ -4,7 +4,7 @@ import * as step2 from './step2/index.js';
 import * as step3 from './step3/index.js';
 import step4 from './step4/step4.js';
 
-export default {
+export {
   single,
   step1,
   step2,

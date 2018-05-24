@@ -1,5 +1,5 @@
 import quote from './quote.js';
-import single from './travel/single/index.js';
+import * as single from './travel/single/index.js';
 import altapay from './travel/altapay.js';
 
 const bupaGlobal = (
