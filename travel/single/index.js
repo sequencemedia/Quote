@@ -1,9 +1,9 @@
 /* globals FocusEvent, MouseEvent */
 /* eslint semi: "off" */
 
-(function single () {
-  const EVENT = { bubbles: true, cancelable: true, view: window };
+import EVENT from '../../common/event.js';
 
+export function single () {
   {
     const button = document.querySelector('button[data-cover-type="travel"]');
     if (button) {
@@ -37,4 +37,4 @@
       button.dispatchEvent(new MouseEvent('click', EVENT));
     }
   }
-})();
+}

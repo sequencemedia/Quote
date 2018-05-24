@@ -1,24 +1,16 @@
 /* globals MouseEvent */
 /* eslint semi: 'off' */
 
-function isVisible (element) {
-  return !!(
-    element && !(window.getComputedStyle(element)
-      .getPropertyValue('display') === 'none')
-  );
-}
+import {
+  isVisible
+} from '../../../common/element.js';
 
-function getVisible (elements) {
-  return Array.from(elements)
-    .find(isVisible) || null;
-}
+import EVENT from '../../../common/event.js';
 
-(function applyCampaignCode () {
+export default function applyCampaignCode () {
   const element = document.querySelector('[data-step-index="3"]');
 
   if (isVisible(element)) {
-    const EVENT = { bubbles: true, cancelable: true, view: window };
-
     const campaignCode = element.querySelector('.campaign-code input[type="text"]');
     if (campaignCode) {
       campaignCode.value = 'family15';
@@ -31,4 +23,4 @@ function getVisible (elements) {
     const button = element.querySelector('.campaign-code button.cta');
     if (button) button.dispatchEvent(new MouseEvent('click', EVENT));
   }
-})();
+};

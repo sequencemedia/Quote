@@ -1,23 +1,15 @@
 /* eslint semi: "off" */
 
-function isVisible (element) {
-  return !!(
-    element && !(window.getComputedStyle(element)
-      .getPropertyValue('display') === 'none')
-  );
-}
+import {
+  isVisible
+} from '../../../common/element.js';
 
-function getVisible (elements) {
-  return Array.from(elements)
-    .find(isVisible) || null;
-}
+import EVENT from '../../../common/event.js';
 
-(function Altapay () {
+export default function altapay () {
   const element = document.querySelector('section.altapay-main-container');
 
   if (isVisible(element)) {
-    const EVENT = { bubbles: true, cancelable: true, view: window };
-
     const ccnInput = element.querySelector('#creditCardNumberInput');
     if (ccnInput) {
       ccnInput.value = '4444444444444444';
@@ -33,4 +25,4 @@ function getVisible (elements) {
     const form = element.querySelector('#CreditCard');
     if (form) form.submit();
   }
-})();
+};

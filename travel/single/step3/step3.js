@@ -1,25 +1,17 @@
 /* globals MouseEvent */
 /* eslint semi: "off" */
 
-function isVisible (element) {
-  return !!(
-    element && !(window.getComputedStyle(element)
-      .getPropertyValue('display') === 'none')
-  );
-}
+import {
+  isVisible
+} from '../../../common/element.js';
 
-function getVisible (elements) {
-  return Array.from(elements)
-    .find(isVisible) || null;
-}
+import EVENT from '../../../common/event.js';
 
-(function step3 () {
+export default function step3 () {
   const element = document.querySelector('[data-step-index="3"]');
 
   if (isVisible(element)) {
-    const EVENT = { bubbles: true, cancelable: true, view: window };
-
     const button = element.querySelector('button.cta-button.quote-cta-next');
     if (button) button.dispatchEvent(new MouseEvent('click', EVENT));
   }
-})();
+};

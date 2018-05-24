@@ -12,25 +12,17 @@
  *    4/5
  */
 
-function isVisible (element) {
-  return !!(
-    element && !(window.getComputedStyle(element)
-      .getPropertyValue('display') === 'none')
-  );
-}
+import {
+  isVisible
+} from '../../../common/element.js';
 
-function getVisible (elements) {
-  return Array.from(elements)
-    .find(isVisible) || null;
-}
+import EVENT from '../../../common/event.js';
 
-(function step2 () {
+export default function step2 () {
   const element = document.querySelector('[data-step-index="2"]');
 
   if (isVisible(element)) {
-    const EVENT = { bubbles: true, cancelable: true, view: window };
-
     const button = element.querySelector('button.buy-cta');
     if (button) button.dispatchEvent(new MouseEvent('click', EVENT));
   }
-})();
+}

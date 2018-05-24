@@ -1,24 +1,16 @@
 /* globals MouseEvent */
 /* eslint semi: 'off' */
 
-function isVisible (element) {
-  return !!(
-    element && !(window.getComputedStyle(element)
-      .getPropertyValue('display') === 'none')
-  );
-}
+import {
+  isVisible
+} from '../../../common/element.js';
 
-function getVisible (elements) {
-  return Array.from(elements)
-    .find(isVisible) || null;
-}
+import EVENT from '../../../common/event.js';
 
-(function step4 () {
+export default function step4 () {
   const element = document.querySelector('[data-step-index="4"]');
 
   if (isVisible(element)) {
-    const EVENT = { bubbles: true, cancelable: true, view: window };
-
     const address1 = element.querySelector('input#address_1');
     if (address1) address1.value = '4 Callisons Place';
 
@@ -46,4 +38,4 @@ function getVisible (elements) {
       if (!button.dispatchEvent(event)) event.preventDefault();
     }
   }
-})();
+};
