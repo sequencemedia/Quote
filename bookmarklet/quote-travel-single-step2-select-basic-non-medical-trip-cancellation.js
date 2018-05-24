@@ -3,12 +3,14 @@
 (function bookmarklet() {
   function execute() {
     const {
-      travel: {
-        single: {
-          step2: {
-            selectBasicNonMedicalTripCancellation = () => {
-              throw new Error('Default `quote.travel.single.step2.selectBasicNonMedicalTripCancellation`.');
-            }
+      quote: {
+        travel: {
+          single: {
+            step2: {
+              selectBasicNonMedicalTripCancellation = () => {
+                throw new Error('Default `quote.travel.single.step2.selectBasicNonMedicalTripCancellation`.');
+              }
+            } = {}
           } = {}
         } = {}
       } = {}

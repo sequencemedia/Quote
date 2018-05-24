@@ -3,11 +3,13 @@
 (function bookmarklet() {
   function execute() {
     const {
-      travel: {
-        annual: {
-          step1 = () => {
-            throw new Error('Default `quote.travel.annual.step1`.');
-          }
+      quote: {
+        travel: {
+          annual: {
+            step1 = () => {
+              throw new Error('Default `quote.travel.annual.step1`.');
+            }
+          } = {}
         } = {}
       } = {}
     } = window.bupaGlobal || {};

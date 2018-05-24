@@ -6,10 +6,12 @@ import altapay from './travel/altapay.js';
 const bupaGlobal = (window.bupaGlobal || (window.bupaGlobal = {}));
 
 Object.assign(bupaGlobal, {
-  quote,
-  travel: {
-    single,
-    annual,
-    altapay
+  quote: {
+    quote,
+    travel: {
+      single,
+      annual,
+      altapay
+    }
   }
 });

@@ -3,12 +3,14 @@
 (function bookmarklet() {
   function execute() {
     const {
-      travel: {
-        single: {
-          step3: {
-            applyCampaignCode = () => {
-              throw new Error('Default `quote.travel.single.step3.applyCampaignCode`.');
-            }
+      quote: {
+        travel: {
+          single: {
+            step3: {
+              applyCampaignCode = () => {
+                throw new Error('Default `quote.travel.single.step3.applyCampaignCode`.');
+              }
+            } = {}
           } = {}
         } = {}
       } = {}

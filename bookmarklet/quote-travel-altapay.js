@@ -3,10 +3,12 @@
 (function bookmarklet() {
   function execute() {
     const {
-      travel: {
-        altapay = () => {
-          throw new Error('Default `quote.travel.altapay`.');
-        }
+      quote: {
+        travel: {
+          altapay = () => {
+            throw new Error('Default `quote.travel.altapay`.');
+          }
+        } = {}
       } = {}
     } = window.bupaGlobal || {};
 

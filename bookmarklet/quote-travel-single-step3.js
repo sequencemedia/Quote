@@ -3,12 +3,14 @@
 (function bookmarklet() {
   function execute() {
     const {
-      travel: {
-        single: {
-          step3: {
-            step3 = () => {
-              throw new Error('Default `quote.travel.single.step3`.');
-            }
+      quote: {
+        travel: {
+          single: {
+            step3: {
+              step3 = () => {
+                throw new Error('Default `quote.travel.single.step3`.');
+              }
+            } = {}
           } = {}
         } = {}
       } = {}

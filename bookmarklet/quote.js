@@ -3,9 +3,11 @@
 (function bookmarklet() {
   function execute() {
     const {
-      quote = () => {
-        throw new Error('Default `quote`.');
-      }
+      quote: {
+        quote = () => {
+          throw new Error('Default `quote`.');
+        }
+      } = {}
     } = window.bupaGlobal || {};
 
     try {

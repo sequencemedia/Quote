@@ -3,12 +3,14 @@
 (function bookmarklet() {
   function execute() {
     const {
-      travel: {
-        single: {
-          step2: {
-            selectBasic = () => {
-              throw new Error('Default `quote.travel.single.step2.selectBasic`.');
-            }
+      quote: {
+        travel: {
+          single: {
+            step2: {
+              selectBasic = () => {
+                throw new Error('Default `quote.travel.single.step2.selectBasic`.');
+              }
+            } = {}
           } = {}
         } = {}
       } = {}
