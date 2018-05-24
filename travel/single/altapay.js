@@ -1,12 +1,10 @@
 /* eslint semi: "off" */
 
-import {
-  isVisible
-} from '../../common/element.js';
+import { isVisible } from '../../common/element.js';
 
 import EVENT from '../../common/event.js';
 
-export default function altapay () {
+export default function altapay() {
   const element = document.querySelector('section.altapay-main-container');
 
   if (isVisible(element)) {
@@ -25,4 +23,4 @@ export default function altapay () {
     const form = element.querySelector('#CreditCard');
     if (form) form.submit();
   }
-};
+}

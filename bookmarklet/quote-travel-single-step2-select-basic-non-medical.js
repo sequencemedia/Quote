@@ -1,11 +1,11 @@
-(function () {
-  function execute () {
+(function () { // eslint-disable-line
+  function execute() {
     const {
       travel: {
         single: {
           step2: {
             selectBasicNonMedical = () => {
-              throw new Error('Default `quote.travel.single.step2.selectBasicNonMedical`.')
+              throw new Error('Default `quote.travel.single.step2.selectBasicNonMedical`.');
             }
           } = {}
         } = {}
@@ -14,8 +14,8 @@
 
     try {
       selectBasicNonMedical();
-    } catch ({ message = 'An error occurred executing `quote.travel.single.step2.selectBasicNonMedical`.'}) {
-      console.error(message)
+    } catch ({ message = 'An error occurred executing `quote.travel.single.step2.selectBasicNonMedical`.' }) {
+      console.error(message); // eslint-disable-line
     }
   }
 
@@ -32,4 +32,4 @@
 
     document.head.appendChild(script);
   }
-})();
+}());

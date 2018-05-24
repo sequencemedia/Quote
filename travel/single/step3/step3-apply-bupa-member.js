@@ -1,13 +1,11 @@
 /* globals MouseEvent */
 /* eslint semi: 'off' */
 
-import {
-  isVisible
-} from '../../../common/element.js';
+import { isVisible } from '../../../common/element.js';
 
 import EVENT from '../../../common/event.js';
 
-export default function applyBupaMember () {
+export default function applyBupaMember() {
   const element = document.querySelector('[data-step-index="3"]');
 
   if (isVisible(element)) {
@@ -23,4 +21,4 @@ export default function applyBupaMember () {
     const button = element.querySelector('.bupa-member button.cta');
     if (button) button.dispatchEvent(new MouseEvent('click', EVENT));
   }
-};
+}

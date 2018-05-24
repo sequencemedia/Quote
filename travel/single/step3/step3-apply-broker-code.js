@@ -1,13 +1,11 @@
 /* globals MouseEvent */
 /* eslint semi: 'off' */
 
-import {
-  isVisible
-} from '../../../common/element.js';
+import { isVisible } from '../../../common/element.js';
 
 import EVENT from '../../../common/event.js';
 
-export default function applyBrokerCode () {
+export default function applyBrokerCode() {
   const element = document.querySelector('[data-step-index="3"]');
 
   if (isVisible(element)) {
@@ -17,4 +15,4 @@ export default function applyBrokerCode () {
     const brokerCode = element.querySelector('input.broker-code-input-js');
     if (brokerCode) brokerCode.value = '123456789';
   }
-};
+}

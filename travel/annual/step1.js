@@ -1,7 +1,7 @@
 /* globals FocusEvent, MouseEvent */
 /* eslint semi: "off" */
 
-(function step1 () {
+(function step1() {
   const EVENT = { bubbles: true, cancelable: true, view: window };
 
   const startDate = document.querySelector('[data-step-index="1"] select#month-select');
@@ -27,4 +27,4 @@
 
   const button = document.querySelector('[data-step-index="1"] button.cta-button');
   if (button) button.dispatchEvent(new MouseEvent('click', EVENT));
-})();
+}());

@@ -1,15 +1,15 @@
-(function () {
-  function execute () {
+(function () { // eslint-disable-line
+  function execute() {
     const {
       quote = () => {
-        throw new Error('Default `quote`.')
+        throw new Error('Default `quote`.');
       }
     } = window.bupaGlobal || {};
 
     try {
       quote();
-    } catch ({ message = 'An error occurred executing `quote`.'}) {
-      console.error(message)
+    } catch ({ message = 'An error occurred executing `quote`.' }) {
+      console.error(message); // eslint-disable-line
     }
   }
 
@@ -25,4 +25,4 @@
 
     document.head.appendChild(script);
   }
-})();
+}());

@@ -12,13 +12,11 @@
  *    4/5
  */
 
-import {
-  isVisible
-} from '../../../common/element.js';
+import { isVisible } from '../../../common/element.js';
 
 import EVENT from '../../../common/event.js';
 
-export default function step2 () {
+export default function step2() {
   const element = document.querySelector('[data-step-index="2"]');
 
   if (isVisible(element)) {

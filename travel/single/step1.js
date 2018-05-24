@@ -1,21 +1,19 @@
 /* globals FocusEvent, MouseEvent */
 /* eslint semi: "off" */
 
-import {
-  isVisible
-} from '../../common/element.js';
+import { isVisible } from '../../common/element.js';
 
 import EVENT from '../../common/event.js';
 
-export default function step1 () {
+export default function step1() {
   const element = document.querySelector('[data-step-index="1"]');
 
   if (isVisible(element)) {
-     const startDate = element.querySelector('input#startdate');
+    const startDate = element.querySelector('input#startdate');
     if (startDate) {
       startDate.dispatchEvent(new FocusEvent('focus', EVENT));
       startDate.dispatchEvent(new MouseEvent('click', EVENT));
-      const [ day ] = Array.from(document.querySelectorAll('.datepicker .day:not(.disabled)'));
+      const [day] = Array.from(document.querySelectorAll('.datepicker .day:not(.disabled)'));
       if (day) day.dispatchEvent(new MouseEvent('click', EVENT));
     }
 
@@ -23,7 +21,7 @@ export default function step1 () {
     if (endDate) {
       endDate.dispatchEvent(new FocusEvent('focus', EVENT));
       endDate.dispatchEvent(new MouseEvent('click', EVENT));
-      const [ day ] = Array.from(document.querySelectorAll('.datepicker .day:not(.disabled)'));
+      const [day] = Array.from(document.querySelectorAll('.datepicker .day:not(.disabled)'));
       if (day) day.dispatchEvent(new MouseEvent('click', EVENT));
     }
 
@@ -48,4 +46,4 @@ export default function step1 () {
     const button = element.querySelector('button.cta-button');
     if (button) button.dispatchEvent(new MouseEvent('click', EVENT));
   }
-};
+}

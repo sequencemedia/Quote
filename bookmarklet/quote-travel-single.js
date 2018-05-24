@@ -1,10 +1,10 @@
-(function () {
-  function execute () {
+(function () { // eslint-disable-line
+  function execute() {
     const {
       travel: {
         single: {
           single = () => {
-            throw new Error('Default `quote.travel.single`.')
+            throw new Error('Default `quote.travel.single`.');
           }
         } = {}
       } = {}
@@ -12,8 +12,8 @@
 
     try {
       single();
-    } catch ({ message = 'An error occurred executing `quote.travel.single`.'}) {
-      console.error(message)
+    } catch ({ message = 'An error occurred executing `quote.travel.single`.' }) {
+      console.error(message); // eslint-disable-line
     }
   }
 
@@ -30,4 +30,4 @@
 
     document.head.appendChild(script);
   }
-})();
+}());

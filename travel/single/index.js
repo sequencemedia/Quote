@@ -3,7 +3,7 @@
 
 import EVENT from '../../common/event.js';
 
-export default function single () {
+export default function single() {
   {
     const button = document.querySelector('button[data-cover-type="travel"]');
     if (button) {

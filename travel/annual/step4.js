@@ -1,7 +1,7 @@
 /* globals MouseEvent */
 /* eslint semi: 'off' */
 
-(function step4 () {
+(function step4() {
   const EVENT = { bubbles: true, cancelable: true, view: window };
 
   const address1 = document.querySelector('[data-step-index="4"] input#address_1');
@@ -30,4 +30,4 @@
     const event = new MouseEvent('click', { bubbles: true, cancelable: true, view: window });
     if (!button.dispatchEvent(event)) event.preventDefault();
   }
-})();
+}());

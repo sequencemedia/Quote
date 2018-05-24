@@ -15,17 +15,15 @@
  *    button 4/5
  */
 
-import {
-  isVisible
-} from '../../../common/element.js';
+import { isVisible } from '../../../common/element.js';
 
 import EVENT from '../../../common/event.js';
 
-export default function selectBasicNonMedicalTripCancellation () {
+export default function selectBasicNonMedicalTripCancellation() {
   const element = document.querySelector('[data-step-index="2"]');
 
   if (isVisible(element)) {
     const button = element.querySelector('[data-product-index="2"] button.buy-cta');
     if (button) button.dispatchEvent(new MouseEvent('click', EVENT));
   }
-};
+}

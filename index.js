@@ -20,4 +20,4 @@ Object.assign(bupaGlobal, {
       altapay
     }
   }
-})
+});

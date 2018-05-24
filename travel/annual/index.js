@@ -1,7 +1,7 @@
 /* globals FocusEvent, MouseEvent */
 /* eslint semi: "off" */
 
-(function annual () {
+(function annual() {
   const EVENT = { bubbles: true, cancelable: true, view: window };
 
   {
@@ -37,4 +37,4 @@
       button.dispatchEvent(new MouseEvent('click', EVENT));
     }
   }
-})();
+}());
