@@ -3,11 +3,9 @@
     const {
       travel: {
         single: {
-          step4: {
-            step4 = () => {
-              throw new Error('Default `quote.travel.single.step4`.')
-            }
-          } = {}
+          step4 = () => {
+            throw new Error('Default `quote.travel.single.step4`.')
+          }
         } = {}
       } = {}
     } = window.bupaGlobal || {};
