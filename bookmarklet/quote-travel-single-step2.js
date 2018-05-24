@@ -6,9 +6,11 @@
       quote: {
         travel: {
           single: {
-            step2 = () => {
-              throw new Error('Default `quote.travel.single.step2`.');
-            }
+            step2: {
+              step2 = () => {
+                throw new Error('Default `quote.travel.single.step2`.');
+              }
+            } = {}
           } = {}
         } = {}
       } = {}

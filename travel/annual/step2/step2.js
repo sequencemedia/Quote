@@ -2,13 +2,16 @@
 
 /*
  *  BASIC
- *    0/1
+ *    data-product-index 0 button 0/1
+ *    button 0/1
  *
  *  BASIC + NON MEDICAL
- *    2/3
+ *    data-product-index 1 button 0/1
+ *    button 2/3
  *
  *  BASIC + NON MEDICAL + TRIP CANCELLATION
- *    4/5
+ *    data-product-index 2 button 0/1
+ *    button 4/5
  */
 
 import { isVisible } from '../../../common/element.js';

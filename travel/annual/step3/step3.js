@@ -1,5 +1,4 @@
 /* globals MouseEvent */
-/* eslint semi: "off" */
 
 import { isVisible } from '../../../common/element.js';
 

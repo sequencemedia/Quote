@@ -6,9 +6,11 @@
       quote: {
         travel: {
           annual: {
-            step2 = () => {
-              throw new Error('Default `quote.travel.annual.step2`.');
-            }
+            step2: {
+              step2 = () => {
+                throw new Error('Default `quote.travel.annual.step2`.');
+              }
+            } = {}
           } = {}
         } = {}
       } = {}
