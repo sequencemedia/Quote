@@ -5,11 +5,9 @@
     const {
       travel: {
         annual: {
-          step3: {
-            step3 = () => {
-              throw new Error('Default `quote.travel.annual.step3`.');
-            }
-          } = {}
+          step3 = () => {
+            throw new Error('Default `quote.travel.annual.step3`.');
+          }
         } = {}
       } = {}
     } = window.bupaGlobal || {};
