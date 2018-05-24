@@ -27,6 +27,7 @@ function loadQuoteTravelSingleStep3 () {
     script.setAttribute('type', 'module');
     script.setAttribute('src', 'https://rawgit.com/sequencemedia/Quote/master/index.js');
     script.setAttribute('id', 'bupa-global-quote');
+
     script.addEventListener('load', loadQuoteTravelSingleStep3);
 
     document.head.appendChild(script);

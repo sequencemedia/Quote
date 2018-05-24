@@ -19,9 +19,8 @@ function loadQuoteTravelSingleStep4 () {
 }
 
 (function () {
-  const script = document.querySelector('#bupa-global-quote');
-  if (script) {
-    script.dispatchEvent(new Event('load'));
+  if (document.querySelector('#bupa-global-quote')) {
+    loadQuoteTravelSingleStep4();
   } else {
     const script = document.createElement('script');
 
