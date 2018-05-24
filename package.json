@@ -1,0 +1,25 @@
+{
+  "name": "quote",
+  "version": "1.0.0",
+  "description": "Quote",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://SequenceMedia@github.com/sequencemedia/Quote.git"
+  },
+  "author": "Jonathan Perry for Sequence Media Limited",
+  "bugs": {
+    "url": "https://github.com/sequencemedia/Quote/issues"
+  },
+  "homepage": "https://github.com/sequencemedia/Quote#readme",
+  "private": true,
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0"
+  }
+}

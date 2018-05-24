@@ -4,17 +4,15 @@
   function execute() {
     const {
       travel: {
-        single: {
-          altapay = () => {
-            throw new Error('Default `quote.travel.single.altapay`.');
-          }
-        } = {}
+        altapay = () => {
+          throw new Error('Default `quote.travel.altapay`.');
+        }
       } = {}
     } = window.bupaGlobal || {};
 
     try {
       altapay();
-    } catch ({ message = 'An error occurred executing `quote.travel.single.altapay`.' }) {
+    } catch ({ message = 'An error occurred executing `quote.travel.altapay`.' }) {
       console.error(message);
     }
   }

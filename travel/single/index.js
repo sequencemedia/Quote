@@ -1,40 +1,11 @@
-/* globals FocusEvent, MouseEvent */
-/* eslint semi: "off" */
+import step1 from './step1.js';
+import * as step2 from './step2/index.js';
+import * as step3 from './step3/index.js';
+import step4 from './step4/step4.js';
 
-import EVENT from '../../common/event.js';
-
-export default function single() {
-  {
-    const button = document.querySelector('button[data-cover-type="travel"]');
-    if (button) {
-      button.dispatchEvent(new FocusEvent('focus', EVENT));
-      button.dispatchEvent(new MouseEvent('click', EVENT));
-    }
-  }
-
-  {
-    const button = document.querySelector('button[data-cover-period="single"]');
-    if (button) {
-      button.dispatchEvent(new FocusEvent('focus', EVENT));
-      button.dispatchEvent(new MouseEvent('click', EVENT));
-    }
-
-    const country = document.querySelector('#country-quote-travel');
-    if (country) {
-      country.dispatchEvent(new FocusEvent('focus', EVENT));
-      country.dispatchEvent(new MouseEvent('click', EVENT));
-      country.value = 'United Kingdom';
-    }
-
-    const acceptPredictedCountry = document.querySelector('.accept-predicted-country');
-    if (acceptPredictedCountry) acceptPredictedCountry.dispatchEvent(new MouseEvent('click', EVENT));
-  }
-
-  {
-    const button = document.querySelector('#step0-cta-continue');
-    if (button) {
-      button.dispatchEvent(new FocusEvent('focus', EVENT));
-      button.dispatchEvent(new MouseEvent('click', EVENT));
-    }
-  }
-}
+export {
+  step1,
+  step2,
+  step3,
+  step4
+};
