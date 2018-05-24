@@ -1,26 +1,26 @@
-function loadQuoteTravelSingleStep2SelectBasic () {
-  const {
-    travel: {
-      single: {
-        step2: {
-          selectBasic = () => {
-            throw new Error('Default `quote.travel.single.step2.selectBasic`.')
-          }
+(function () {
+  function execute () {
+    const {
+      travel: {
+        single: {
+          step2: {
+            selectBasic = () => {
+              throw new Error('Default `quote.travel.single.step2.selectBasic`.')
+            }
+          } = {}
         } = {}
       } = {}
-    } = {}
-  } = window.bupaGlobal || {};
+    } = window.bupaGlobal || {};
 
-  try {
-    selectBasic();
-  } catch ({ message = 'An error occurred executing `quote.travel.single.step2.selectBasic`.'}) {
-    console.error(message)
+    try {
+      selectBasic();
+    } catch ({ message = 'An error occurred executing `quote.travel.single.step2.selectBasic`.'}) {
+      console.error(message)
+    }
   }
-}
 
-(function () {
   if (document.querySelector('#bupa-global-quote')) {
-    loadQuoteTravelSingleStep2SelectBasic();
+    execute();
   } else {
     const script = document.createElement('script');
 
@@ -28,7 +28,7 @@ function loadQuoteTravelSingleStep2SelectBasic () {
     script.setAttribute('src', 'https://rawgit.com/sequencemedia/Quote/master/index.js');
     script.setAttribute('id', 'bupa-global-quote');
 
-    script.addEventListener('load', loadQuoteTravelSingleStep2SelectBasic);
+    script.addEventListener('load', execute);
 
     document.head.appendChild(script);
   }
