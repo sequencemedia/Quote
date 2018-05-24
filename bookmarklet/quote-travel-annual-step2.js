@@ -4,10 +4,10 @@
   function execute() {
     const {
       travel: {
-        single: {
+        annual: {
           step2: {
             step2 = () => {
-              throw new Error('Default `quote.travel.single.step2`.');
+              throw new Error('Default `quote.travel.annual.step2`.');
             }
           } = {}
         } = {}
@@ -16,7 +16,7 @@
 
     try {
       step2();
-    } catch ({ message = 'An error occurred executing `quote.travel.single.step2`.' }) {
+    } catch ({ message = 'An error occurred executing `quote.travel.annual.step2`.' }) {
       console.error(message);
     }
   }

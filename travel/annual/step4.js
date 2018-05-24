@@ -1,9 +1,8 @@
 /* globals MouseEvent */
-/* eslint semi: 'off' */
 
-(function step4() {
-  const EVENT = { bubbles: true, cancelable: true, view: window };
+import EVENT from '../../common/event.js';
 
+export default function step4() {
   const address1 = document.querySelector('[data-step-index="4"] input#address_1');
   if (address1) address1.value = '4 Callisons Place';
 
@@ -30,4 +29,4 @@
     const event = new MouseEvent('click', { bubbles: true, cancelable: true, view: window });
     if (!button.dispatchEvent(event)) event.preventDefault();
   }
-}());
+}

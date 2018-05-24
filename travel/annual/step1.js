@@ -1,9 +1,8 @@
 /* globals FocusEvent, MouseEvent */
-/* eslint semi: "off" */
 
-(function step1() {
-  const EVENT = { bubbles: true, cancelable: true, view: window };
+import EVENT from '../../common/event.js';
 
+export default function step1() {
   const startDate = document.querySelector('[data-step-index="1"] select#month-select');
   if (startDate) startDate.selectedIndex = 1;
 
@@ -27,4 +26,4 @@
 
   const button = document.querySelector('[data-step-index="1"] button.cta-button');
   if (button) button.dispatchEvent(new MouseEvent('click', EVENT));
-}());
+}

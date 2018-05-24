@@ -2,7 +2,7 @@
 
 import EVENT from '../../common/event.js';
 
-export default function single() {
+export default function annual() {
   {
     const button = document.querySelector('button[data-cover-type="travel"]');
     if (button) {
@@ -12,7 +12,7 @@ export default function single() {
   }
 
   {
-    const button = document.querySelector('button[data-cover-period="single"]');
+    const button = document.querySelector('button[data-cover-period="annual"]');
     if (button) {
       button.dispatchEvent(new FocusEvent('focus', EVENT));
       button.dispatchEvent(new MouseEvent('click', EVENT));

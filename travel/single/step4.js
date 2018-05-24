@@ -1,9 +1,8 @@
 /* globals MouseEvent */
-/* eslint semi: 'off' */
 
-import { isVisible } from '../../../common/element.js';
+import { isVisible } from '../../common/element.js';
 
-import EVENT from '../../../common/event.js';
+import EVENT from '../../common/event.js';
 
 export default function step4() {
   const element = document.querySelector('[data-step-index="4"]');
