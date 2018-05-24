@@ -21,7 +21,7 @@ import {
 
 import EVENT from '../../../common/event.js';
 
-export default function step2 () {
+export default function selectBasicNonMedicalTripCancellation () {
   const element = document.querySelector('[data-step-index="2"]');
 
   if (isVisible(element)) {

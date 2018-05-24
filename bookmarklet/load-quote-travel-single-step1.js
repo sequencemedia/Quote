@@ -1,31 +1,31 @@
-function loadTravelSingleStep3 () {
+function loadQuoteTravelSingleStep1 () {
   const {
     travel: {
       single: {
-        step3 = () => {
-          throw new Error('Default `travel.single.step2`.')
+        step1 = () => {
+          throw new Error('Default `quote.travel.single.step1`.')
         }
       } = {}
     } = {}
   } = window.bupaGlobal || {};
 
   try {
-    step3();
-  } catch ({ message = 'An error occurred executing `travel.single.step2`.'}) {
+    step1();
+  } catch ({ message = 'An error occurred executing `quote.travel.single.step1`.'}) {
     console.error(message)
   }
 }
 
 (function () {
   if (document.querySelector('#bupa-global-quote')) {
-    loadTravelSingleStep3();
+    loadQuoteTravelSingleStep1();
   } else {
     const script = document.createElement('script');
 
     script.setAttribute('type', 'module');
     script.setAttribute('src', 'https://rawgit.com/sequencemedia/Quote/master/index.js');
     script.setAttribute('id', 'bupa-global-quote');
-    script.addEventListener('load', loadTravelSingleStep3);
+    script.addEventListener('load', loadQuoteTravelSingleStep1);
 
     document.head.appendChild(script);
   }

@@ -21,11 +21,11 @@ import {
 
 import EVENT from '../../../common/event.js';
 
-export default function step2 () {
+export default function slectBasic () {
   const element = document.querySelector('[data-step-index="2"]');
 
   if (isVisible(element)) {
-    const button = element.querySelector('[data-product-index="1"] button.buy-cta');
+    const button = element.querySelector('[data-product-index="0"] button.buy-cta');
     if (button) button.dispatchEvent(new MouseEvent('click', EVENT));
   }
-};
+}
