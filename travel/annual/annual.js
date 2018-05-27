@@ -19,11 +19,15 @@ export default function annual() {
       button.dispatchEvent(new MouseEvent('click', EVENT));
     }
 
+    const countryName = 'United Kingdom'.toLowerCase();
+    const countryIndex = Array.from(document.querySelectorAll('.alternative-country-select option'))
+      .findIndex(({ textContent = '' }) => textContent.trim().toLowerCase() === countryName);
+
     document.querySelectorAll('#country-quote-travel')
       .forEach((country) => {
         country.dispatchEvent(new FocusEvent('focus', EVENT));
         country.dispatchEvent(new MouseEvent('click', EVENT));
-        country.value = 'United Kingdom';
+        country.value = countryName;
         country.dispatchEvent(new Event('change', EVENT));
       });
 
@@ -31,7 +35,7 @@ export default function annual() {
       .forEach((country) => {
         country.dispatchEvent(new FocusEvent('focus', EVENT));
         country.dispatchEvent(new MouseEvent('click', EVENT));
-        country.selectedIndex = 228;
+        country.selectedIndex = countryIndex;
         country.dispatchEvent(new Event('change', EVENT));
       });
 
