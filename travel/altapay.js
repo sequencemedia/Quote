@@ -18,7 +18,7 @@ export default function altapay() {
       cvcInput.dispatchEvent(new Event('change', EVENT));
     }
 
-    const form = element.querySelector('#CreditCard');
-    if (form) form.submit();
+    const submit = element.querySelector('input[type="submit"]');
+    if (submit) submit.dispatchEvent(new MouseEvent('click', EVENT));
   }
 }
