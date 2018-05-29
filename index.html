@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Quote - Travel - Bookmarklets
+		</title>
+		<script type="text/javascript">
+			window.addEventListener('DOMContentLoaded', () => {
+				document.querySelctorAll('ul a')
+					.forEach((anchor) => {
+						const id = anchor.getAttribute('id');
+
+						anchor.setAttribute('href', `javascipt:${document.getElementById(id.replace('anchor', 'script')).textContent}`);
+					});
+			});
+		</script>
+	</head>
+	<body>
+		<main>
+			<h1>All Quote Travel Bookmarklets</h1>
+			<h2>To Drag and Drop</h2>
+			<ul>
+				<li><a id="quote-anchor">Quote</a></li>
+				<li>Annual
+					<ul>
+						<li><a id="quote-travel-annual-anchor">Annual</a></li>
+						<li><a id="quote-travel-annual-step1-anchor">Step 1</a></li>
+						<li>Step 2
+							<ul>
+								<li><a id="quote-travel-annual-step2-anchor">Step 2</a></li>
+								<li><a id="quote-travel-annual-step2-select-basic-anchor">Step 2 - Select Basic</a></li>
+								<li><a id="quote-travel-annual-step2-select-basic-non-medical-anchor">Step 2 - Select Basic + Non-Medical</a></li>
+								<li><a id="quote-travel-annual-step2-select-basic-non-medicall-trip-cancellation-anchor">Step 2 - Select Basic + Non-Medical + Trip Cancellation</a></li>
+							</ul>
+						</li>
+						<li>Step 3
+							<ul>
+								<li><a id="quote-travel-annual-step3-anchor">Step 3</a></li>
+								<li><a id="quote-travel-annual-step3-apply-campaign-code-anchor">Step 3 - Apply Campaign Code</a></li>
+								<li><a id="quote-travel-annual-step3-apply-bupa-member-anchor">Step 3 - Apply Bup Member</a></li>
+								<li><a id="quote-travel-annual-step3-apply-broker-code-anchor">Step 3 - Apply Broker Code</a></li>
+							</ul>
+						</li>
+						<li><a id="quote-travel-annual-step4-anchor">Step 4</a></li>
+					</ul>
+				</li>
+				<li>Single
+					<ul>
+						<li><a id="quote-travel-single-anchor">Single</a></li>
+						<li><a id="quote-travel-single-step1-anchor">Step 1</a></li>
+						<li>Step 2
+							<ul>
+								<li><a id="quote-travel-single-step2-anchor">Step 2</a></li>
+								<li><a id="quote-travel-single-step2-select-basic-anchor">Step 2 - Select Basic</a></li>
+								<li><a id="quote-travel-single-step2-select-basic-non-medical-anchor">Step 2 - Select Basic + Non-Medical</a></li>
+								<li><a id="quote-travel-single-step2-select-basic-non-medicall-trip-cancellation-anchor">Step 2 - Select Basic + Non-Medical + Trip Cancellation</a></li>
+							</ul>
+						</li>
+						<li>Step 3
+							<ul>
+								<li><a id="quote-travel-single-step3-anchor">Step 3</a></li>
+								<li><a id="quote-travel-single-step3-anchor">Step 3 - Apply Campaign Code</a></li>
+								<li><a id="quote-travel-single-step3-anchor">Step 3 - Apply Bup Member</a></li>
+								<li><a id="quote-travel-single-step3-anchor">Step 3 - Apply Broker Code</a></li>
+							</ul>
+						</li>
+						<li><a id="quote-travel-single-step4-anchor">Step 4</a></li>
+					</ul>
+				</li>
+				<li><a id="altapay-anchor">Altapay</a></li>
+		</main>
+		<script type="text/javascript" id="quote-script" src="./bookmarket/quote.js"></script>
+		<script type="text/javascript" id="quote-travel-annual-script" src="./bookmarklet/quote-travel-annual.js"></script>
+		<script type="text/javascript" id="quote-travel-annual-step1-script" src="./bookmarklet/quote-travel-annual-step1.js"></script>
+		<script type="text/javascript" id="quote-travel-annual-step2-script" src="./bookmarklet/quote-travel-annual-step2.js"></script>
+		<script type="text/javascript" id="quote-travel-annual-step2-select-basic-script" src="./bookmarklet/quote-travel-annual-step2-select-basic.js"></script>
+		<script type="text/javascript" id="quote-travel-annual-step2-select-basic-non-medical-script" src="./bookmarklet/quote-travel-annual-step2-select-basic-non-medical.js"></script>
+		<script type="text/javascript" id="quote-travel-annual-step2-select-basic-non-medical-trip-cancellation-script" src="./bookmarklet/quote-travel-annual-step2-select-basic-non-medical-trip-cancellation.js"></script>
+		<script type="text/javascript" id="quote-travel-annual-step3-script" src="./bookmarklet/quote-travel-annual-step3.js"></script>
+		<script type="text/javascript" id="quote-travel-annual-step3-apply-campaign-code-script" src="./bookmarklet/quote-travel-annual-step3-apply-campaign-code.js"></script>
+		<script type="text/javascript" id="quote-travel-annual-step3-apply-bupa-member-script" src="./bookmarklet/quote-travel-annual-step3-apply-bupa-member.js"></script>
+		<script type="text/javascript" id="quote-travel-annual-step3-apply-broker-code-script" src="./bookmarklet/quote-travel-annual-step3-apply-broker-code.js"></script>
+		<script type="text/javascript" id="quote-travel-annual-step4-script" src="./bookmarklet/quote-travel-annual-step4.js"></script>
+		<script type="text/javascript" id="quote-travel-single-script" src="./bookmarklet/quote-travel-single.js"></script>
+		<script type="text/javascript" id="quote-travel-single-step1-script" src="./bookmarklet/quote-travel-single-step1.js"></script>
+		<script type="text/javascript" id="quote-travel-single-step2-script" src="./bookmarklet/quote-travel-single-step2.js"></script>
+		<script type="text/javascript" id="quote-travel-single-step3-script" src="./bookmarklet/quote-travel-single-step3.js"></script>
+		<script type="text/javascript" id="quote-travel-single-step4-script" src="./bookmarklet/quote-travel-single-step4.js"></script>
+		<script type="text/javascript" id="quote-travel-single-step2-select-basic-script" src="./bookmarklet/quote-travel-single-step2-select-basic.js"></script>
+		<script type="text/javascript" id="quote-travel-single-step2-select-basic-non-medical-script" src="./bookmarklet/quote-travel-single-step2-select-basic-non-medical.js"></script>
+		<script type="text/javascript" id="quote-travel-single-step2-select-basic-non-medical-trip-cancellation-script" src="./bookmarklet/"></script>
+		<script type="text/javascript" id="quote-travel-single-step3-apply-campaign-code-script" src="./bookmarklet/quote-travel-single-step3-apply-campaign-code.js"></script>
+		<script type="text/javascript" id="quote-travel-single-step3-apply-bupa-member-script" src="./bookmarklet/quote-travel-single-step3-apply-bupa-member.js"></script>
+		<script type="text/javascript" id="quote-travel-single-step3-apply-broker-code-script" src="./bookmarklet/quote-travel-single-step3-apply-broker-code.js"></script>
+		<script type="text/javascript" id="altapay-script" src="./bookmarklet/quote-travel-altapay.js"></script>
+	</body>
+</html>
