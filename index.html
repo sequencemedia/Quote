@@ -12,7 +12,7 @@
 
 						fetch(`./bookmarklet/${id}.js`)
 							.then((response) => response.text())
-							.then(() => {
+							.then((javascript) => {
 								anchor.setAttribute('href', `javascript:${javascript}`);
 							})
 					});
