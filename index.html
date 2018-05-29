@@ -10,7 +10,7 @@
 					.forEach((anchor) => {
 						const id = anchor.getAttribute('id');
 
-						fetch(`./bookmarklet/${id}.js`')
+						fetch(`./bookmarklet/${id}.js`)
 							.then((response) => response.text())
 							.then(() => {
 								anchor.setAttribute('href', `javascript:${javascript}`);
