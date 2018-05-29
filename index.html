@@ -12,7 +12,10 @@
 
 						fetch(`./bookmarklet/${id}.js`)
 							.then((response) => response.text())
-							.then((javascript) => {
+							.then((text) => {
+								let javascript = text.replace(/\n/g, ' ');
+								while (/\s\s/g.test(javascript)) javascript = javascript.replace(/\s\s/g, ' ');
+
 								anchor.setAttribute('href', `javascript:${javascript}`);
 							})
 					});
